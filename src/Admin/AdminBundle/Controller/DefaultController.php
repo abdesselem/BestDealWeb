@@ -10,8 +10,11 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class DefaultController extends Controller
 {
     public function indexAction()
-    {
-        return $this->render('AdminAdminBundle:Default:index.html.twig');
+    {  $em= $this->getDoctrine()->getManager();
+        $prest=$em->getRepository("UserBundle:User")->findBy(array('statut' => '0'));
+        $deal=$em->getRepository("UserBundle:Deal")->findBy(array('statut' => '0'));
+        
+        return $this->render('AdminAdminBundle:Default:index.html.twig',array("deals"=>$deal,"prests"=>$prest));
     }
     public function morrisAction()
     {
@@ -114,6 +117,22 @@ class DefaultController extends Controller
         $em= $this->getDoctrine()->getManager();
         $recherche=$em->getRepository("UserBundle:User")->findBy(array('nom' => $searchQuery));
         return $this->render("AdminAdminBundle:Default:recherche.html.twig",array("recherches"=>$recherche));
+        
+    }
+    
+    public function rechercherPAction(Request $request){
+        $searchQuery = $this->get('request')->request->get('recherche');
+        $em= $this->getDoctrine()->getManager();
+        $recherche=$em->getRepository("UserBundle:User")->findBy(array('nom' => $searchQuery,'statut' =>'1'));
+        return $this->render("AdminAdminBundle:Default:rechercheP.html.twig",array("recherches"=>$recherche));
+        
+    }
+    
+     public function rechercherDAction(Request $request){
+        $searchQuery = $this->get('request')->request->get('recherche');
+        $em= $this->getDoctrine()->getManager();
+        $recherche=$em->getRepository("UserBundle:Deal")->findBy(array('libelle' => $searchQuery,'statut' =>'1'));
+        return $this->render("AdminAdminBundle:Default:rechercheD.html.twig",array("recherches"=>$recherche));
         
     }
 }

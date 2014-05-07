@@ -10,6 +10,11 @@ admin_admin_morris:
     pattern:  /Admin/morris
     defaults: { _controller: AdminAdminBundle:Default:morris }
 
+admin_admin_notif:
+    pattern:  /Admin/index
+    defaults: { _controller: AdminAdminBundle:Default:index }
+
+
 admin_admin_client:
     pattern:  /Admin/client
     defaults: { _controller: AdminAdminBundle:Default:client }
@@ -51,6 +56,16 @@ prest_supprimer:
 deal_supprimer:
     pattern:  /Admin/supprimerD/{id}
     defaults: { _controller: AdminAdminBundle:Default:supprimerD }    
-deal_rechercher:
+
+user_rechercher:
     pattern:  /Admin/rechercher
-    defaults: { _controller: AdminAdminBundle:Default:rechercher }    
+    defaults: { _controller: AdminAdminBundle:Default:rechercher } 
+    
+user_rechercherP:
+    pattern:  /Admin/rechercherP
+    defaults: { _controller: AdminAdminBundle:Default:rechercherP }  
+    
+    
+deal_rechercher:
+    pattern:  /Admin/rechercherD
+    defaults: { _controller: AdminAdminBundle:Default:rechercherD }      
