@@ -135,4 +135,20 @@ class DefaultController extends Controller
         return $this->render("AdminAdminBundle:Default:rechercheD.html.twig",array("recherches"=>$recherche));
         
     }
+    
+    public function rechercher_prenomAction(Request $request){
+        $searchQuery = $this->get('request')->request->get('recherche');
+        $em= $this->getDoctrine()->getManager();
+        $recherche=$em->getRepository("UserBundle:User")->findBy(array('prenom' => $searchQuery));
+        return $this->render("AdminAdminBundle:Default:recherche.html.twig",array("recherches"=>$recherche));
+        
+    }
+    
+     public function rechercherD_catAction(Request $request){
+        $searchQuery = $this->get('request')->request->get('recherche');
+        $em= $this->getDoctrine()->getManager();
+        $recherche=$em->getRepository("UserBundle:Deal")->findBy(array('categorie' => $searchQuery,'statut' =>'1'));
+        return $this->render("AdminAdminBundle:Default:rechercheD.html.twig",array("recherches"=>$recherche));
+        
+    }
 }

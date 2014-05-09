@@ -68,4 +68,13 @@ user_rechercherP:
     
 deal_rechercher:
     pattern:  /Admin/rechercherD
-    defaults: { _controller: AdminAdminBundle:Default:rechercherD }      
+    defaults: { _controller: AdminAdminBundle:Default:rechercherD }  
+    
+user_rechercher_prenom:
+    pattern:  /Admin/rechercher_prenom
+    defaults: { _controller: AdminAdminBundle:Default:rechercher_prenom }
+    
+deal_rechercher_cat:
+    pattern:  /Admin/rechercherD_cat
+    defaults: { _controller: AdminAdminBundle:Default:rechercherD_cat }
+    

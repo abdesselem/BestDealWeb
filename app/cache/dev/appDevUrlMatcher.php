@@ -226,6 +226,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherDAction',  '_route' => 'deal_rechercher',);
                 }
 
+                // user_rechercher_prenom
+                if ($pathinfo === '/Admin/rechercher_prenom') {
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercher_prenomAction',  '_route' => 'user_rechercher_prenom',);
+                }
+
+                // deal_rechercher_cat
+                if ($pathinfo === '/Admin/rechercherD_cat') {
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherD_catAction',  '_route' => 'deal_rechercher_cat',);
+                }
+
             }
 
         }
