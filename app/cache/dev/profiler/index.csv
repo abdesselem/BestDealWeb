@@ -16,3 +16,17 @@ c7beba,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399
 50ea64,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399671945,
 5df297,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/dareserver/1,1399671954,
 1271c6,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/reserver/1,1399671960,
+3beccd,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/,1399673320,
+6318c4,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399673325,
+95253a,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399673330,
+2594ea,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399673332,8d396c
+8d396c,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399673332,
+12d4d0,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/dareserver/1,1399673342,
+b052ab,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/reserver/1,1399673387,
+4cfb55,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/reserver/1,1399673388,
+af6a9a,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399673419,
+185bc3,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399673425,
+6d524d,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399673427,c918c6
+c918c6,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399673427,
+f62ea4,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/dareserver/1,1399673435,
+4a31ee,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/reserver/1,1399673442,

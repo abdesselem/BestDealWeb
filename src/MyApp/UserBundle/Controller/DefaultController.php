@@ -60,15 +60,21 @@ class DefaultController extends Controller
      public function reserverAction($iddeal)
     {
         $em= $this->getDoctrine()->getManager();
-        
+        $deal=$em->getRepository("UserBundle:Deal")->findOneBy(array('iddeal' => $iddeal));
         $request= $this->container->get('request');
-        
-        $nom=$request->get('qte');
-        
-        $deal= $em->getRepository('UserBundle:Deal')->findBy(array("iddeal"=>$iddeal));
+        $deals= $em->getRepository('UserBundle:Deal')->findBy(array("iddeal"=>$iddeal));
         $reservation= $em->getRepository('UserBundle:Reservation')->findBy(array("iddeal"=>$iddeal));
+        $qte=$request->get('qte');
+        if(($deal->getQuantite()-$qte)<0)
+        {
+            return $this->render('UserBundle:BestDeal:echecreservation.html.twig',array('deals'=>$deals));
+        }
+        else 
+            {
+                return $this->render('UserBundle:BestDeal:succesreservation.html.twig',array('deals'=>$deals));
+            }
         
-        return $this->render('UserBundle:BestDeal:dareserver.html.twig',array('deals'=>$deal));
+      
     }
     
 }
