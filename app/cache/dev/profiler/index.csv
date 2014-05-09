@@ -30,3 +30,17 @@ af6a9a,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399
 c918c6,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399673427,
 f62ea4,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/dareserver/1,1399673435,
 4a31ee,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/reserver/1,1399673442,
+628077,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/,1399677894,
+ea4ab2,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399677902,
+eb7f2c,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399677908,
+ffa0a0,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399677909,58194e
+58194e,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399677910,
+0fd8ec,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399678154,
+636959,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678156,fe2ce7
+fe2ce7,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678156,
+3f5731,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399678261,
+b6de49,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678262,b0e19d
+b0e19d,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678262,
+7d26bb,127.0.0.1,POST,http://localhost/BestDealWeb/web/app_dev.php/recherche,1399678314,
+2e4fa6,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678315,7d2ad4
+7d2ad4,127.0.0.1,GET,http://localhost/BestDealWeb/web/app_dev.php/null,1399678316,

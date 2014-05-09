@@ -56,12 +56,12 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
         foreach ($context['_seq'] as $context["_key"] => $context["deal"]) {
             // line 22
             echo "           
-            <div id=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
-            echo "\" class=\"box\"> 
+            <div class=\"box\"> 
                 <div class=\"col-sm-4 text-center\">
-                    
+                    <div id=\"";
+            // line 25
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
+            echo "\">
                         <h4>";
             // line 26
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "Libelle"), "html", null, true);
@@ -84,42 +84,43 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
             // line 30
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "DateFin"), "html", null, true);
             echo "
+                    </div>
                          <div id=\"";
-            // line 31
+            // line 32
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
-            echo "\" style=\"display:none; height: 600px; opacity: 0.65; padding: 0px; height: auto; width: 1124px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;\">
+            echo "\" style=\"display:none; height: 600px; padding: 0px; height: auto; width: 1124px; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto;\">
     
                    
                    
                    
                      <h4>";
-            // line 36
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "Libelle"), "html", null, true);
             echo "</h4>
                      <img src='";
-            // line 37
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "Image"), "html", null, true);
             echo "' width=\"600px\" height=\"300px\">
                            A partir de ";
-            // line 38
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "PrixPromotionnel"), "html", null, true);
             echo " dt, au lieu de ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "PrixInitial"), "html", null, true);
             echo " dt<br>
                            Date Début de l'offre:";
-            // line 39
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "DateDebut"), "html", null, true);
             echo " <br>
                            Date Fin de l'offre: ";
-            // line 40
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "DateFin"), "html", null, true);
             echo "<br>
                            Détail de l'offre:<br>";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "Descriptif"), "html", null, true);
             echo "
                            <a href=\"";
-            // line 42
+            // line 43
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("deal_areserver", array("iddeal" => $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/reservez.jpg"), "html", null, true);
@@ -136,20 +137,21 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
                       
                         
 \$('#";
-            // line 54
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
-            echo "').click(function(){
-                        \$('#";
             // line 55
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
-            echo "').css(\"background\",'rgba(127,127,127,0.8');
+            echo "').click(function(){
+                        
+                        \$('#";
+            // line 57
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
+            echo "').css(\"display\",'none');
 \t\t\t\$('#";
-            // line 56
+            // line 58
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
             echo "').fadeIn(\"slow\");
 \t\t});
                 \$('#";
-            // line 58
+            // line 60
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
             echo "').bind('click',function(){
                     \$(this).fadeOut('slow');
@@ -160,7 +162,7 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['deal'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 65
         echo "                        
         </div>
 
@@ -180,6 +182,6 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
 
     public function getDebugInfo()
     {
-        return array (  164 => 63,  153 => 58,  148 => 56,  144 => 55,  140 => 54,  123 => 42,  119 => 41,  115 => 40,  111 => 39,  105 => 38,  101 => 37,  97 => 36,  89 => 31,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  61 => 23,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
+        return array (  166 => 65,  155 => 60,  150 => 58,  146 => 57,  141 => 55,  124 => 43,  120 => 42,  116 => 41,  112 => 40,  106 => 39,  102 => 38,  98 => 37,  90 => 32,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
     }
 }
