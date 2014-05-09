@@ -9,6 +9,10 @@ admin_admin_homepage:
 admin_admin_morris:
     pattern:  /Admin/morris
     defaults: { _controller: AdminAdminBundle:Default:morris }
+    
+admin_admin_flot:
+    pattern:  /Admin/flot
+    defaults: { _controller: AdminAdminBundle:Default:flot }
 
 admin_admin_notif:
     pattern:  /Admin/index
