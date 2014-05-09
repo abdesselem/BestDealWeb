@@ -114,8 +114,15 @@
                 <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="morris"><i class="fa fa-bar-chart-o fa-fw"></i> Statistiques</a>
-
+                    <a href="morris"><i class="fa fa-bar-chart-o fa-fw"></i> Statistiques<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="flot">Flot Charts</a>
+                        </li>
+                        <li>
+                            <a href="morris">Morris.js Charts</a>
+                        </li>
+                    </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 <!-- <li>
@@ -154,6 +161,7 @@
 
 <!-- SB Admin Scripts - Include with every page -->
 <script src="{{asset('js/admin/sb-admin.js')}}"></script>
+<script src="{{asset('js/admin/demo/flot-demo.js')}}"></script>
 <script>
     $(function() {
 
