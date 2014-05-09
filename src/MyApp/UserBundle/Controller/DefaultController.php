@@ -46,4 +46,29 @@ class DefaultController extends Controller
         return $this->render('UserBundle:BestDeal:about.html.twig');
     }
     
+    public function dareserverAction($iddeal)
+    {
+        $em= $this->getDoctrine()->getManager();
+          
+        $deal= $em->getRepository('UserBundle:Deal')->findBy(array("iddeal"=>$iddeal));
+        $reservation= $em->getRepository('UserBundle:Reservation')->findBy(array("iddeal"=>$iddeal));
+        
+        return $this->render('UserBundle:BestDeal:dareserver.html.twig',array('deals'=>$deal));
+    }
+    
+    
+     public function reserverAction($iddeal)
+    {
+        $em= $this->getDoctrine()->getManager();
+        
+        $request= $this->container->get('request');
+        
+        $nom=$request->get('qte');
+        
+        $deal= $em->getRepository('UserBundle:Deal')->findBy(array("iddeal"=>$iddeal));
+        $reservation= $em->getRepository('UserBundle:Reservation')->findBy(array("iddeal"=>$iddeal));
+        
+        return $this->render('UserBundle:BestDeal:dareserver.html.twig',array('deals'=>$deal));
+    }
+    
 }

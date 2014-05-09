@@ -146,6 +146,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::morrisAction',  '_route' => 'admin_admin_morris',);
             }
 
+            // admin_admin_flot
+            if ($pathinfo === '/Admin/flot') {
+                return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::flotAction',  '_route' => 'admin_admin_flot',);
+            }
+
             // admin_admin_notif
             if ($pathinfo === '/Admin/index') {
                 return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_admin_notif',);
@@ -460,9 +465,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_supprimer')), array (  '_controller' => 'MyApp\\UserBundle\\Controller\\BlogController::supprimerAction',));
         }
 
+        // deal_areserver
+        if (0 === strpos($pathinfo, '/dareserver') && preg_match('#^/dareserver/(?P<iddeal>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'deal_areserver')), array (  '_controller' => 'MyApp\\UserBundle\\Controller\\DefaultController::dareserverAction',));
+        }
+
         // deal_reserver
-        if ($pathinfo === '/home') {
-            return array (  '_controller' => 'MyApp\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'deal_reserver',);
+        if (0 === strpos($pathinfo, '/reserver') && preg_match('#^/reserver/(?P<iddeal>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'deal_reserver')), array (  '_controller' => 'MyApp\\UserBundle\\Controller\\DefaultController::reserverAction',));
         }
 
         // _welcome

@@ -20,9 +20,9 @@
             
                  {% for deal in deals %}
            
-            <div class="box"> 
+            <div id="{{deal.IdDeal}}" class="box"> 
                 <div class="col-sm-4 text-center">
-                    <div id="{{deal.IdDeal}}">
+                    
                         <h4>{{deal.Libelle}}</h4>
                         <img src='{{deal.Image}}' width="250px" height="100px">
                            A partir de {{deal.PrixPromotionnel}} dt, au lieu de {{deal.PrixInitial}} dt<br>
@@ -39,9 +39,9 @@
                            Date Début de l'offre:{{deal.DateDebut}} <br>
                            Date Fin de l'offre: {{deal.DateFin}}<br>
                            Détail de l'offre:<br>{{deal.Descriptif}}
-                           <a href="{{path('deal_reserver',{id:deal.IdDeal})}}"><img src="{{asset('img/reservez.jpg')}}"></a>
+                           <a href="{{path('deal_areserver',{iddeal:deal.IdDeal})}}"><img src="{{asset('img/reservez.jpg')}}"></a>
                     </div>
-                    </div>        
+                            
                </div>
                      </div>
                
@@ -52,10 +52,10 @@
                       
                         
 $('#{{deal.IdDeal}}').click(function(){
-                        $('.row').css("background",'rgba(127,127,127,0.8')
+                        $('#{{deal.IdDeal}}').css("background",'rgba(127,127,127,0.8');
 			$('#{{deal.IdDeal+200}}').fadeIn("slow");
 		});
-                $('#{{deal.IdDeal+200}}').bind('mouseout',function(){
+                $('#{{deal.IdDeal+200}}').bind('click',function(){
                     $(this).fadeOut('slow');
                 });
                         </script>         

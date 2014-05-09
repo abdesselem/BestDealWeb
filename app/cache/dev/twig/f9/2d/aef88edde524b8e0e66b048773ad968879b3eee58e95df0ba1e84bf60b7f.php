@@ -56,12 +56,12 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
         foreach ($context['_seq'] as $context["_key"] => $context["deal"]) {
             // line 22
             echo "           
-            <div class=\"box\"> 
-                <div class=\"col-sm-4 text-center\">
-                    <div id=\"";
-            // line 25
+            <div id=\"";
+            // line 23
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
-            echo "\">
+            echo "\" class=\"box\"> 
+                <div class=\"col-sm-4 text-center\">
+                    
                         <h4>";
             // line 26
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "Libelle"), "html", null, true);
@@ -120,12 +120,12 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
             echo "
                            <a href=\"";
             // line 42
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("deal_reserver", array("id" => $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("deal_areserver", array("iddeal" => $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"))), "html", null, true);
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/reservez.jpg"), "html", null, true);
             echo "\"></a>
                     </div>
-                    </div>        
+                            
                </div>
                      </div>
                
@@ -139,7 +139,10 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
             // line 54
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
             echo "').click(function(){
-                        \$('.row').css(\"background\",'rgba(127,127,127,0.8')
+                        \$('#";
+            // line 55
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
+            echo "').css(\"background\",'rgba(127,127,127,0.8');
 \t\t\t\$('#";
             // line 56
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
@@ -148,7 +151,7 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
                 \$('#";
             // line 58
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
-            echo "').bind('mouseout',function(){
+            echo "').bind('click',function(){
                     \$(this).fadeOut('slow');
                 });
                         </script>         
@@ -177,6 +180,6 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
 
     public function getDebugInfo()
     {
-        return array (  161 => 63,  150 => 58,  145 => 56,  140 => 54,  123 => 42,  119 => 41,  115 => 40,  111 => 39,  105 => 38,  101 => 37,  97 => 36,  89 => 31,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
+        return array (  164 => 63,  153 => 58,  148 => 56,  144 => 55,  140 => 54,  123 => 42,  119 => 41,  115 => 40,  111 => 39,  105 => 38,  101 => 37,  97 => 36,  89 => 31,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  61 => 23,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
     }
 }

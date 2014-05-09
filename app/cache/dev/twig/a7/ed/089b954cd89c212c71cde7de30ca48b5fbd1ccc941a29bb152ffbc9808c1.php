@@ -39,6 +39,10 @@ class __TwigTemplate_a7ed089b954cd89c212c71cde7de30ca48b5fbd1ccc941a29bb152ffbc9
         // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bestdeal.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
+        <script src=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery-1.11.0.min.js"), "html", null, true);
+        echo "\" language=\"Javascript\"></script>
     </head>
 
     <body>
@@ -78,9 +82,9 @@ class __TwigTemplate_a7ed089b954cd89c212c71cde7de30ca48b5fbd1ccc941a29bb152ffbc9
         </nav>
 
         ";
-        // line 55
-        $this->displayBlock('container', $context, $blocks);
         // line 56
+        $this->displayBlock('container', $context, $blocks);
+        // line 57
         echo "
         <footer>
             <div class=\"footer\">
@@ -94,11 +98,11 @@ class __TwigTemplate_a7ed089b954cd89c212c71cde7de30ca48b5fbd1ccc941a29bb152ffbc9
 
         <!-- JavaScript -->
         <script src=\"";
-        // line 68
+        // line 69
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery-1.10.2.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 69
+        // line 70
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
         <script>
@@ -114,7 +118,7 @@ class __TwigTemplate_a7ed089b954cd89c212c71cde7de30ca48b5fbd1ccc941a29bb152ffbc9
 ";
     }
 
-    // line 55
+    // line 56
     public function block_container($context, array $blocks = array())
     {
         echo " ";
@@ -132,6 +136,6 @@ class __TwigTemplate_a7ed089b954cd89c212c71cde7de30ca48b5fbd1ccc941a29bb152ffbc9
 
     public function getDebugInfo()
     {
-        return array (  118 => 55,  102 => 69,  98 => 68,  84 => 56,  82 => 55,  40 => 16,  34 => 13,  20 => 1,  161 => 63,  150 => 58,  145 => 56,  140 => 54,  123 => 42,  119 => 41,  115 => 40,  111 => 39,  105 => 38,  101 => 37,  97 => 36,  89 => 31,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
+        return array (  122 => 56,  106 => 70,  102 => 69,  88 => 57,  86 => 56,  44 => 17,  40 => 16,  34 => 13,  20 => 1,  96 => 57,  61 => 25,  55 => 22,  49 => 19,  31 => 3,  28 => 2,);
     }
 }

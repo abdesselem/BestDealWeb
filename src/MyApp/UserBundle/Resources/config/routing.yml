@@ -49,6 +49,11 @@ blog_supprimer:
         id:  \d+
         
         
+deal_areserver:
+    pattern:  /dareserver/{iddeal}
+    defaults: { _controller: UserBundle:Default:dareserver }
+    
+    
 deal_reserver:
-    pattern:  /home
-    defaults: { _controller: UserBundle:Default:index }
+    pattern:  /reserver/{iddeal}
+    defaults: { _controller: UserBundle:Default:reserver }
