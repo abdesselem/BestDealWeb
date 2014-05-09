@@ -161,8 +161,7 @@
 
 <!-- SB Admin Scripts - Include with every page -->
 <script src="{{asset('js/admin/sb-admin.js')}}"></script>
-<script src="{{asset('js/admin/demo/flot-demo.js')}}"></script>
-<script>
+<script id="morris">
     $(function() {
 
         Morris.Donut({
@@ -222,6 +221,9 @@
 
 
 </script>
+{% block morris %} 
+
+{% endblock %}
 <!-- Page-Level Demo Scripts - Morris - Use for reference -->
 
 </body>
