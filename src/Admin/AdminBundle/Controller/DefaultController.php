@@ -20,7 +20,10 @@ class DefaultController extends Controller
     {
         return $this->render('AdminAdminBundle:Default:morris.html.twig');
     }
-    
+    public function flotAction()
+    {
+        return $this->render('AdminAdminBundle:Default:flot.html.twig');
+    }
      public function clientAction()
     {   
        $em= $this->getDoctrine()->getManager();
