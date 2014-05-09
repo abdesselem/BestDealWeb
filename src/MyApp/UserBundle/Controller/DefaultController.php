@@ -20,7 +20,20 @@ class DefaultController extends Controller
     
      public function rechercheAction()
     {
-        return $this->render('UserBundle:BestDeal:rechercheliste.html.twig');
+         $em= $this->getDoctrine()->getManager();
+        
+        $request= $this->container->get('request');
+        
+        $nom=$request->get('nom');
+        $type=$request->get('type');
+        $cat=$request->get('cat');
+        $ndeals=$em->getRepository('UserBundle:Deal')->findBy(array("libelle"=>$nom));
+        $tdeals=$em->getRepository('UserBundle:Deal')->findBy(array("typedeal"=>$type));
+        $cdeals=$em->getRepository('UserBundle:Deal')->findBy(array("categorie"=>$cat));
+        $deals= array_merge($ndeals, $tdeals, $cdeals);
+       
+
+        return $this->render('UserBundle:BestDeal:rechercheliste.html.twig', array('deals'=>$deals));
     }
     
      public function connexionAction()

@@ -47,3 +47,8 @@ blog_supprimer:
     defaults:  { _controller: UserBundle:Blog:supprimer }
     requirements:
         id:  \d+
+        
+        
+deal_reserver:
+    pattern:  /home
+    defaults: { _controller: UserBundle:Default:index }

@@ -146,6 +146,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::morrisAction',  '_route' => 'admin_admin_morris',);
             }
 
+            // admin_admin_notif
+            if ($pathinfo === '/Admin/index') {
+                return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_admin_notif',);
+            }
+
             // admin_admin_client
             if ($pathinfo === '/Admin/client') {
                 return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::clientAction',  '_route' => 'admin_admin_client',);
@@ -205,9 +210,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             }
 
-            // deal_rechercher
-            if ($pathinfo === '/Admin/rechercher') {
-                return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherAction',  '_route' => 'deal_rechercher',);
+            if (0 === strpos($pathinfo, '/Admin/rechercher')) {
+                // user_rechercher
+                if ($pathinfo === '/Admin/rechercher') {
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherAction',  '_route' => 'user_rechercher',);
+                }
+
+                // user_rechercherP
+                if ($pathinfo === '/Admin/rechercherP') {
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherPAction',  '_route' => 'user_rechercherP',);
+                }
+
+                // deal_rechercher
+                if ($pathinfo === '/Admin/rechercherD') {
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\DefaultController::rechercherDAction',  '_route' => 'deal_rechercher',);
+                }
+
             }
 
         }
@@ -430,6 +448,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // blog_supprimer
         if (0 === strpos($pathinfo, '/supprimer') && preg_match('#^/supprimer/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_supprimer')), array (  '_controller' => 'MyApp\\UserBundle\\Controller\\BlogController::supprimerAction',));
+        }
+
+        // deal_reserver
+        if ($pathinfo === '/home') {
+            return array (  '_controller' => 'MyApp\\UserBundle\\Controller\\DefaultController::indexAction',  '_route' => 'deal_reserver',);
         }
 
         // _welcome
