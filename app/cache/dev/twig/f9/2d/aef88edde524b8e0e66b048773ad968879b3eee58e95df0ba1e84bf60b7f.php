@@ -153,16 +153,24 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
                 \$('#";
             // line 60
             echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
-            echo "').bind('click',function(){
-                    \$(this).fadeOut('slow');
-                });
+            echo "').click(function(){
+                        
+                        \$('#";
+            // line 62
+            echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal") + 200), "html", null, true);
+            echo "').css(\"display\",'none');
+\t\t\t\$('#";
+            // line 63
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["deal"]) ? $context["deal"] : $this->getContext($context, "deal")), "IdDeal"), "html", null, true);
+            echo "').fadeIn(\"slow\");
+\t\t});
                         </script>         
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['deal'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 67
         echo "                        
         </div>
 
@@ -182,6 +190,6 @@ class __TwigTemplate_f92daef88edde524b8e0e66b048773ad968879b3eee58e95df0ba1e84bf
 
     public function getDebugInfo()
     {
-        return array (  166 => 65,  155 => 60,  150 => 58,  146 => 57,  141 => 55,  124 => 43,  120 => 42,  116 => 41,  112 => 40,  106 => 39,  102 => 38,  98 => 37,  90 => 32,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
+        return array (  174 => 67,  164 => 63,  160 => 62,  155 => 60,  150 => 58,  146 => 57,  141 => 55,  124 => 43,  120 => 42,  116 => 41,  112 => 40,  106 => 39,  102 => 38,  98 => 37,  90 => 32,  85 => 30,  81 => 29,  75 => 28,  71 => 27,  67 => 26,  63 => 25,  58 => 22,  54 => 21,  37 => 7,  31 => 3,  28 => 2,);
     }
 }

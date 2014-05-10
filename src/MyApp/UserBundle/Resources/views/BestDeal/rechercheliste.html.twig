@@ -57,9 +57,11 @@ $('#{{deal.IdDeal}}').click(function(){
                         $('#{{deal.IdDeal}}').css("display",'none');
 			$('#{{deal.IdDeal+200}}').fadeIn("slow");
 		});
-                $('#{{deal.IdDeal+200}}').bind('click',function(){
-                    $(this).fadeOut('slow');
-                });
+                $('#{{deal.IdDeal+200}}').click(function(){
+                        
+                        $('#{{deal.IdDeal+200}}').css("display",'none');
+			$('#{{deal.IdDeal}}').fadeIn("slow");
+		});
                         </script>         
                         {% endfor %}
                         
