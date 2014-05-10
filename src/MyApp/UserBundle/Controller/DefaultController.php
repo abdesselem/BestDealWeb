@@ -3,6 +3,9 @@
 namespace MyApp\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use MyApp\UserBundle\Entity\Reservation;
+use MyApp\UserBundle\Entity\Deal;
+use MyApp\UserBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -61,9 +64,11 @@ class DefaultController extends Controller
     {
         $em= $this->getDoctrine()->getManager();
         $deal=$em->getRepository("UserBundle:Deal")->findOneBy(array('iddeal' => $iddeal));
+        $user=$em->getRepository("UserBundle:User")->findOneBy(array('iduser' => '2'));
         $request= $this->container->get('request');
         $deals= $em->getRepository('UserBundle:Deal')->findBy(array("iddeal"=>$iddeal));
-        $reservation= $em->getRepository('UserBundle:Reservation')->findBy(array("iddeal"=>$iddeal));
+        
+        $reservationdeal= $em->getRepository('UserBundle:Reservation')->findBy(array("iddeal"=>$iddeal));
         $qte=$request->get('qte');
         if(($deal->getQuantite()-$qte)<0)
         {
@@ -71,6 +76,15 @@ class DefaultController extends Controller
         }
         else 
             {
+                $reservation = new Reservation();
+                $reservation->setIduser($user);
+                $reservation->setIddeal($deal);
+                $reservation->setDatereservation(date('l \t\h\e jS'));
+                $reservation->setQuantite($qte);
+                $deal->setQuantite($deal->getQuantite()-$qte);
+                $em->persist($reservation);
+                $em->flush();
+                //return new RedirectResponse($this->get('router')->generate('etudiant_liste'));
                 return $this->render('UserBundle:BestDeal:succesreservation.html.twig',array('deals'=>$deals));
             }
         
